@@ -1,7 +1,8 @@
+import { DOMRender } from "./common.js"
 import { Widget } from "./Widget/index.js"
 
 
-let main = document.getElementById('main')
-let widget = new Widget({name: "Bob"})
-
-main.innerText = widget.render()
+DOMRender.render(
+    new Widget({name: "Bob"}),
+    document.getElementById('main')
+)
